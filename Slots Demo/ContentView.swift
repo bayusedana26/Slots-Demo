@@ -34,7 +34,7 @@ struct ContentView: View {
                 Spacer()
                 
                 // MARK: credit counter
-                Text("Credits: " + String(credits))
+                Text("Credit points: " + String(credits))
                     .padding(.all, 10)
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(25)

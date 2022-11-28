@@ -166,6 +166,15 @@ struct ContentView: View {
             
             //MARK: diagonal top right to bottom left
             if isMatches(2, 4, 6) {matches += 1}
+            
+            //MARK: horizontal left
+            if isMatches(0, 3, 6) {matches += 1}
+            
+            //MARK: horizontal mid
+            if isMatches(1, 4, 7) {matches += 1}
+            
+            //MARK: horizontal right
+            if isMatches(2, 5, 8) {matches += 1}
         }
             // MARK: check matches and distribute credits
             if matches > 0 {
@@ -181,8 +190,7 @@ struct ContentView: View {
         }
     func isMatches(_ index1: Int, _ index2: Int, _ index3: Int) -> Bool {
         
-        if self.numbers[index1] == self.numbers[index2] && self.numbers[2] == self.numbers[3] {
-            
+        if self.numbers[index1] == self.numbers[index2] && self.numbers[index2] == self.numbers[index3] {
             self.backgrounds[index1] = Color.green
             self.backgrounds[index2] = Color.green
             self.backgrounds[index3] = Color.green
